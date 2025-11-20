@@ -14,10 +14,13 @@ namespace api_careluna.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int pc_id { get; set; }
         public int cli_id { get; set; }
-        public ClientesModel Cliente { get; set; }
         public int pro_id { get; set; }
-        public ProductosModel Productos { get; set; }
         public int pc_Cantidad { get; set; }
         public decimal pc_Precio { get; set; }
+        
+        [ForeignKey("cli_id")]
+        public ClientesModel Cliente { get; set; }
+        [ForeignKey("pro_id")]
+        public ProductosModel Productos { get; set; }
     }
 }

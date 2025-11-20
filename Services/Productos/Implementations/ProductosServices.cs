@@ -34,6 +34,19 @@ namespace api_careluna.Services.Productos.Implementations
             await _context.SaveChangesAsync();
             return Data;
         }
+        public async Task<bool> EliminarProducto(int id)
+        {
+            var producto = _context.Producto.FirstOrDefaultAsync(id);
+            if (producto == null) return false;
+
+            producto.pro_Estado = "I";
+            _context.Producto.Update(producto);
+            await _context.SaveChangesAsync();
+
+            return true;
+        }
+
+
 
 
     }

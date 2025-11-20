@@ -14,12 +14,13 @@ namespace api_careluna.Data
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ped_Id { get; set; }
-        public int cli_id { get; set; }
-        public ClientesModel Cliente { get; set; }
+        public int cli_id { get; set; }        
         public DateTime ped_Fecha { get; set; } = DateTime.Now;
         public decimal ped_Total { get; set; }
 
-        public ICollection<PedidoProductoModel> Productos { get; set; }
+        [ForeignKey("cli_id")]
+        public ClientesModel Cliente { get; set; }
+        public ICollection<PedidoDetalleModel> Productos { get; set; }
 
     }
 }

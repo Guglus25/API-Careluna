@@ -18,6 +18,7 @@ namespace api_careluna.Models
         public string pro_Nombre { get; set; } = string.Empty;
         public decimal pro_Precio { get; set; }
         public string? pro_Descripcion { get; set; }
+        public char pro_Estado { get; set; }
 
         public List<ProductoClienteModel>? productoClientes { get; set; }
 

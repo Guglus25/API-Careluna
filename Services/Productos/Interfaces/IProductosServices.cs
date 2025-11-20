@@ -9,6 +9,8 @@ namespace api_careluna.Services.Productos.Interfaces
     public interface IProductosServices
     {
         Task<List<ProductosModel>> ConsultarProductos();
+        Task<ProductosModel> ConsultarProductoId(int id);
         Task<ProductosModel> GuardarProducto(ProductosModel Data);
+        Task<bool> EliminarProducto(int id);
     }
 }
