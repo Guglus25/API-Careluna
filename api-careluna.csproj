@@ -5,6 +5,12 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>api_careluna</RootNamespace>
+
+     <!--  Genera el archivo XML para Swagger -->
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+    <!--  Evita warnings por no documentar todas las propiedades -->
+    <NoWarn>$(NoWarn);1591</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>

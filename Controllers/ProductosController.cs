@@ -24,6 +24,10 @@ namespace api_careluna.Controllers
             _productosServices = productosServices;
         }
 
+        /// <summary>
+        /// Obtiene la lista completa de productos.
+        /// </summary>
+        /// <returns>Una lista de productos.</returns>
         [HttpGet(Name = "consultar/productos")]
         public async Task<IActionResult> ConsultarProductos()
         {
