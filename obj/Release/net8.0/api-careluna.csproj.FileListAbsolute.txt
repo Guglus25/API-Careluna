@@ -117,3 +117,9 @@ D:\Proyectos\App-careluna\api-careluna\obj\Release\net8.0\api-careluna.xml
 D:\Proyectos\App-careluna\api-careluna\obj\Release\net8.0\api-careluna.pdb
 D:\Proyectos\App-careluna\api-careluna\obj\Release\net8.0\api-careluna.genruntimeconfig.cache
 D:\Proyectos\App-careluna\api-careluna\obj\Release\net8.0\ref\api-careluna.dll
+D:\Proyectos\App-careluna\api-careluna\bin\Release\net8.0\out\web.config
+D:\Proyectos\App-careluna\api-careluna\bin\Release\net8.0\out\api-careluna.deps.json
+D:\Proyectos\App-careluna\api-careluna\bin\Release\net8.0\out\api-careluna.runtimeconfig.json
+D:\Proyectos\App-careluna\api-careluna\bin\Release\net8.0\out\api-careluna.staticwebassets.endpoints.json
+D:\Proyectos\App-careluna\api-careluna\bin\Release\net8.0\out\appsettings.Development.json
+D:\Proyectos\App-careluna\api-careluna\bin\Release\net8.0\out\appsettings.json
