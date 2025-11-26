@@ -18,7 +18,8 @@ namespace api_careluna.Models
         public string cli_Celular { get; set; }
         public string cli_Direccion { get; set; }
         public string cli_RazonSocial { get; set; }
-        public char cli_Estado { get; set; }
+
+        public char? cli_Estado { get; set; }
 
         public ICollection<ProductoClienteModel> ProductosPersonalizados { get; set; }
         public ICollection<PedidosModel> Pedidos { get; set; }

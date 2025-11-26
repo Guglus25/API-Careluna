@@ -6,11 +6,13 @@ using api_careluna.DTOs;
 using api_careluna.Models;
 using api_careluna.Responses;
 using api_careluna.Services.Productos.Interfaces;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 
 namespace api_careluna.Controllers
 {
+
     [ApiController]
     [Route("[controller]")]
     public class ProductosController : ControllerBase
@@ -18,10 +20,12 @@ namespace api_careluna.Controllers
         private readonly ILogger<ProductosController> _logger;
         private readonly IProductosServices _productosServices;
 
+
         public ProductosController(ILogger<ProductosController> logger, IProductosServices productosServices)
         {
             _logger = logger;
             _productosServices = productosServices;
+
         }
 
         /// <summary>
@@ -50,7 +54,7 @@ namespace api_careluna.Controllers
         }
 
         [HttpPost(Name = "guardar/producto")]
-        public async Task<IActionResult> GuardarProducto([FromBody] ProductosModel Data)
+        public async Task<IActionResult> GuardarProducto([FromBody] ProductoDto Data)
         {
             if (!ModelState.IsValid)
             {

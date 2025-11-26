@@ -14,7 +14,7 @@ namespace api_careluna.Data
         public DbSet<PedidosModel> Pedidos { get; set; }
         public DbSet<ClientesModel> Clientes { get; set; }
         public DbSet<ProductoClienteModel> ProductoCliente { get; set; }
-        public DbSet<PedidoProductoModel> PedidoProducto { get; set; }
+        public DbSet<PedidoDetalleModel> PedidoProducto { get; set; }
 
     }
 }

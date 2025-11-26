@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>api-careluna</name>
+    </assembly>
+    <members>
+        <member name="M:api_careluna.Controllers.ProductosController.ConsultarProductos">
+            <summary>
+            Obtiene la lista completa de productos.
+            </summary>
+            <returns>Una lista de productos.</returns>
+        </member>
+        <member name="T:api_careluna.Migrations.Initial">
+            <inheritdoc />
+        </member>
+        <member name="M:api_careluna.Migrations.Initial.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:api_careluna.Migrations.Initial.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:api_careluna.Migrations.Initial.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:api_careluna.Migrations.actualizar">
+            <inheritdoc />
+        </member>
+        <member name="M:api_careluna.Migrations.actualizar.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:api_careluna.Migrations.actualizar.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:api_careluna.Migrations.actualizar.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:api_careluna.Migrations.imagenproducto">
+            <inheritdoc />
+        </member>
+        <member name="M:api_careluna.Migrations.imagenproducto.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:api_careluna.Migrations.imagenproducto.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:api_careluna.Migrations.imagenproducto.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

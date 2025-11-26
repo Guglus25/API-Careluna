@@ -1,4 +1,6 @@
 
+using api_careluna.Models;
+
 namespace api_careluna.Services.Clientes.Interfaces
 {
     public interface IClientesServices

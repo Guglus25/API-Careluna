@@ -12,8 +12,8 @@ using api_careluna.Data;
 namespace api_careluna.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20251120021949_NombreColumns")]
-    partial class NombreColumns
+    [Migration("20251121002427_actualizar")]
+    partial class actualizar
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,9 +33,6 @@ namespace api_careluna.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("ped_Id"));
 
-                    b.Property<int>("Clientecli_Id")
-                        .HasColumnType("integer");
-
                     b.Property<int>("cli_id")
                         .HasColumnType("integer");
 
@@ -47,7 +44,7 @@ namespace api_careluna.Migrations
 
                     b.HasKey("ped_Id");
 
-                    b.HasIndex("Clientecli_Id");
+                    b.HasIndex("cli_id");
 
                     b.ToTable("Pedidos");
                 });
@@ -68,6 +65,9 @@ namespace api_careluna.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<char?>("cli_Estado")
+                        .HasColumnType("character(1)");
+
                     b.Property<string>("cli_Nombre")
                         .IsRequired()
                         .HasColumnType("text");
@@ -81,7 +81,7 @@ namespace api_careluna.Migrations
                     b.ToTable("Clientes");
                 });
 
-            modelBuilder.Entity("api_careluna.Models.PedidoProductoModel", b =>
+            modelBuilder.Entity("api_careluna.Models.PedidoDetalleModel", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -90,12 +90,6 @@ namespace api_careluna.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<int>("Cantidad")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("ClienteProductopc_id")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("Pedidoped_Id")
                         .HasColumnType("integer");
 
                     b.Property<decimal>("PrecioUsado")
@@ -109,9 +103,9 @@ namespace api_careluna.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ClienteProductopc_id");
+                    b.HasIndex("pc_id");
 
-                    b.HasIndex("Pedidoped_Id");
+                    b.HasIndex("ped_id");
 
                     b.ToTable("PedidoProducto");
                 });
@@ -123,12 +117,6 @@ namespace api_careluna.Migrations
                         .HasColumnType("integer");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("pc_id"));
-
-                    b.Property<int>("Clientecli_Id")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("Productospro_Id")
-                        .HasColumnType("integer");
 
                     b.Property<int>("cli_id")
                         .HasColumnType("integer");
@@ -144,9 +132,9 @@ namespace api_careluna.Migrations
 
                     b.HasKey("pc_id");
 
-                    b.HasIndex("Clientecli_Id");
+                    b.HasIndex("cli_id");
 
-                    b.HasIndex("Productospro_Id");
+                    b.HasIndex("pro_id");
 
                     b.ToTable("ProductoCliente");
                 });
@@ -161,6 +149,9 @@ namespace api_careluna.Migrations
 
                     b.Property<string>("pro_Descripcion")
                         .HasColumnType("text");
+
+                    b.Property<char?>("pro_Estado")
+                        .HasColumnType("character(1)");
 
                     b.Property<string>("pro_Nombre")
                         .IsRequired()
@@ -178,24 +169,24 @@ namespace api_careluna.Migrations
                 {
                     b.HasOne("api_careluna.Models.ClientesModel", "Cliente")
                         .WithMany("Pedidos")
-                        .HasForeignKey("Clientecli_Id")
+                        .HasForeignKey("cli_id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Cliente");
                 });
 
-            modelBuilder.Entity("api_careluna.Models.PedidoProductoModel", b =>
+            modelBuilder.Entity("api_careluna.Models.PedidoDetalleModel", b =>
                 {
                     b.HasOne("api_careluna.Models.ProductoClienteModel", "ClienteProducto")
                         .WithMany()
-                        .HasForeignKey("ClienteProductopc_id")
+                        .HasForeignKey("pc_id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("api_careluna.Data.PedidosModel", "Pedido")
                         .WithMany("Productos")
-                        .HasForeignKey("Pedidoped_Id")
+                        .HasForeignKey("ped_id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -208,13 +199,13 @@ namespace api_careluna.Migrations
                 {
                     b.HasOne("api_careluna.Models.ClientesModel", "Cliente")
                         .WithMany("ProductosPersonalizados")
-                        .HasForeignKey("Clientecli_Id")
+                        .HasForeignKey("cli_id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("api_careluna.Models.ProductosModel", "Productos")
                         .WithMany("productoClientes")
-                        .HasForeignKey("Productospro_Id")
+                        .HasForeignKey("pro_id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

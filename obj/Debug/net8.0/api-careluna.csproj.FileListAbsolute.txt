@@ -6,6 +6,7 @@ D:\Proyectos\App-careluna\api-careluna\bin\Debug\net8.0\api-careluna.deps.json
 D:\Proyectos\App-careluna\api-careluna\bin\Debug\net8.0\api-careluna.runtimeconfig.json
 D:\Proyectos\App-careluna\api-careluna\bin\Debug\net8.0\api-careluna.dll
 D:\Proyectos\App-careluna\api-careluna\bin\Debug\net8.0\api-careluna.pdb
+D:\Proyectos\App-careluna\api-careluna\bin\Debug\net8.0\api-careluna.xml
 D:\Proyectos\App-careluna\api-careluna\bin\Debug\net8.0\Humanizer.dll
 D:\Proyectos\App-careluna\api-careluna\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 D:\Proyectos\App-careluna\api-careluna\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
@@ -96,6 +97,7 @@ D:\Proyectos\App-careluna\api-careluna\obj\Debug\net8.0\api-careluna.AssemblyInf
 D:\Proyectos\App-careluna\api-careluna\obj\Debug\net8.0\api-careluna.csproj.CoreCompileInputs.cache
 D:\Proyectos\App-careluna\api-careluna\obj\Debug\net8.0\api-careluna.MvcApplicationPartsAssemblyInfo.cs
 D:\Proyectos\App-careluna\api-careluna\obj\Debug\net8.0\api-careluna.MvcApplicationPartsAssemblyInfo.cache
+D:\Proyectos\App-careluna\api-careluna\obj\Debug\net8.0\api-careluna.sourcelink.json
 D:\Proyectos\App-careluna\api-careluna\obj\Debug\net8.0\rjimswa.dswa.cache.json
 D:\Proyectos\App-careluna\api-careluna\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
 D:\Proyectos\App-careluna\api-careluna\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
@@ -108,6 +110,10 @@ D:\Proyectos\App-careluna\api-careluna\obj\Debug\net8.0\swae.build.ex.cache
 D:\Proyectos\App-careluna\api-careluna\obj\Debug\net8.0\api-care.6B93F124.Up2Date
 D:\Proyectos\App-careluna\api-careluna\obj\Debug\net8.0\api-careluna.dll
 D:\Proyectos\App-careluna\api-careluna\obj\Debug\net8.0\refint\api-careluna.dll
+D:\Proyectos\App-careluna\api-careluna\obj\Debug\net8.0\api-careluna.xml
 D:\Proyectos\App-careluna\api-careluna\obj\Debug\net8.0\api-careluna.pdb
 D:\Proyectos\App-careluna\api-careluna\obj\Debug\net8.0\api-careluna.genruntimeconfig.cache
 D:\Proyectos\App-careluna\api-careluna\obj\Debug\net8.0\ref\api-careluna.dll
+D:\Proyectos\App-careluna\api-careluna\bin\Debug\net8.0\AutoMapper.dll
+D:\Proyectos\App-careluna\api-careluna\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Proyectos\App-careluna\api-careluna\bin\Debug\net8.0\api-careluna.staticwebassets.runtime.json

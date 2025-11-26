@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using api_careluna.Data;
@@ -11,9 +12,11 @@ using api_careluna.Data;
 namespace api_careluna.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251121002254_Initial")]
+    partial class Initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -62,8 +65,8 @@ namespace api_careluna.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<char?>("cli_Estado")
-                        .HasColumnType("character(1)");
+                    b.Property<string>("cli_Estado")
+                        .HasColumnType("text");
 
                     b.Property<string>("cli_Nombre")
                         .IsRequired()
@@ -147,8 +150,8 @@ namespace api_careluna.Migrations
                     b.Property<string>("pro_Descripcion")
                         .HasColumnType("text");
 
-                    b.Property<char?>("pro_Estado")
-                        .HasColumnType("character(1)");
+                    b.Property<string>("pro_Estado")
+                        .HasColumnType("text");
 
                     b.Property<string>("pro_Nombre")
                         .IsRequired()
@@ -156,9 +159,6 @@ namespace api_careluna.Migrations
 
                     b.Property<decimal>("pro_Precio")
                         .HasColumnType("numeric");
-
-                    b.Property<string>("pro_imagen")
-                        .HasColumnType("text");
 
                     b.HasKey("pro_Id");
 

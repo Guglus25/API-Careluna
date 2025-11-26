@@ -17,7 +17,7 @@ namespace api_careluna.Models
         public int pro_id { get; set; }
         public int pc_Cantidad { get; set; }
         public decimal pc_Precio { get; set; }
-        
+
         [ForeignKey("cli_id")]
         public ClientesModel Cliente { get; set; }
         [ForeignKey("pro_id")]

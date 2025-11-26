@@ -1,3 +1,8 @@
+using api_careluna.Data;
+using api_careluna.Models;
+using api_careluna.Services.Clientes.Interfaces;
+using Microsoft.EntityFrameworkCore;
+
 namespace api_careluna.Services.Clientes.Implementations
 {
     public class ClientesServices : IClientesServices
@@ -27,10 +32,10 @@ namespace api_careluna.Services.Clientes.Implementations
 
         public async Task<bool> EliminarCliente(int id)
         {
-            var cliente = _context.Clientes.FirstOrDefaultAsync(p => p.cli_Id == id);
+            ClientesModel cliente = await _context.Clientes.FirstOrDefaultAsync(p => p.cli_Id == id);
             if (cliente == null) return false;
 
-            cliente.cli_Estado = "I";
+            cliente.cli_Estado = 'I';
             _context.Clientes.Update(cliente);
             await _context.SaveChangesAsync();
 

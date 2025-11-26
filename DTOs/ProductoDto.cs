@@ -11,5 +11,7 @@ namespace api_careluna.DTOs
         public string pro_Nombre { get; set; } = string.Empty;
         public decimal pro_Precio { get; set; }
         public string? pro_Descripcion { get; set; }
+        public string? pro_imagen { get; set; }
+        public char? pro_Estado { get; set; }
     }
 }
