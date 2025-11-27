@@ -7,20 +7,27 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Agregar conexión a PostgreSQL
+// ------------------------------------------------------
+// 🔹 1. CONFIGURACIÓN DE SERVICIOS
+// ------------------------------------------------------
+
+// 🔸 Base de datos PostgreSQL (Railway usa variable de entorno)
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("PostgresConnection")));
 
-
+// 🔸 Controladores
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
+// 🔸 Swagger + XML documentation
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
     var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
     var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-    options.IncludeXmlComments(xmlPath);
+
+    if (File.Exists(xmlPath))
+        options.IncludeXmlComments(xmlPath);
+
     options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
     {
         Title = "API Careluna",
@@ -32,41 +39,58 @@ builder.Services.AddSwaggerGen(options =>
             Email = "tu-email@mail.com"
         }
     });
-
 });
+
+// 🔸 CORS
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAll", builder =>
-        builder.AllowAnyOrigin()
-               .AllowAnyHeader()
-               .AllowAnyMethod());
+    options.AddPolicy("AllowAll", policy =>
+        policy.AllowAnyOrigin()
+              .AllowAnyHeader()
+              .AllowAnyMethod());
 });
 
-
+// 🔸 AutoMapper
 builder.Services.AddAutoMapper(typeof(Program));
+
+// 🔸 Inyección de dependencias
 builder.Services.AddScoped<IProductosServices, ProductosServices>();
 
 
-
-
+// ------------------------------------------------------
+// 🔹 2. CONSTRUCCIÓN DE LA APP
+// ------------------------------------------------------
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
 
-// Middleware global
+// ------------------------------------------------------
+// 🔹 3. MIDDLEWARES
+// ------------------------------------------------------
+
+// Middleware global para capturar excepciones
 app.UseMiddleware<ExceptionMiddleware>();
 
-app.UseHttpsRedirection();
+// 🔸 Swagger SIEMPRE habilitado (útil para Railway)
+app.UseSwagger();
+app.UseSwaggerUI();
 
-app.UseAuthorization();
-app.UseCors("AllowAll");
+// ⚠️ Railway NO usa HTTPS interno — se deja solo en local
+if (app.Environment.IsDevelopment())
+{
+    app.UseHttpsRedirection();
+}
+
 app.UseStaticFiles();
 
+app.UseCors("AllowAll");
+
+app.UseAuthorization();
+
+// 🔸 Rutas
 app.MapControllers();
 
+
+// ------------------------------------------------------
+// 🔹 4. EJECUTAR APP
+// ------------------------------------------------------
 app.Run();

@@ -117,3 +117,15 @@ D:\Proyectos\App-careluna\api-careluna\obj\Debug\net8.0\ref\api-careluna.dll
 D:\Proyectos\App-careluna\api-careluna\bin\Debug\net8.0\AutoMapper.dll
 D:\Proyectos\App-careluna\api-careluna\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 D:\Proyectos\App-careluna\api-careluna\bin\Debug\net8.0\api-careluna.staticwebassets.runtime.json
+D:\Proyectos\App-careluna\api-careluna\bin\Debug\net8.0\out\out\web.config
+D:\Proyectos\App-careluna\api-careluna\bin\Debug\net8.0\out\web.config
+D:\Proyectos\App-careluna\api-careluna\bin\Debug\net8.0\out\api-careluna.deps.json
+D:\Proyectos\App-careluna\api-careluna\bin\Debug\net8.0\out\api-careluna.runtimeconfig.json
+D:\Proyectos\App-careluna\api-careluna\bin\Debug\net8.0\out\api-careluna.staticwebassets.endpoints.json
+D:\Proyectos\App-careluna\api-careluna\bin\Debug\net8.0\out\appsettings.Development.json
+D:\Proyectos\App-careluna\api-careluna\bin\Debug\net8.0\out\appsettings.json
+D:\Proyectos\App-careluna\api-careluna\bin\Debug\net8.0\out\out\api-careluna.deps.json
+D:\Proyectos\App-careluna\api-careluna\bin\Debug\net8.0\out\out\api-careluna.runtimeconfig.json
+D:\Proyectos\App-careluna\api-careluna\bin\Debug\net8.0\out\out\api-careluna.staticwebassets.endpoints.json
+D:\Proyectos\App-careluna\api-careluna\bin\Debug\net8.0\out\out\appsettings.Development.json
+D:\Proyectos\App-careluna\api-careluna\bin\Debug\net8.0\out\out\appsettings.json
