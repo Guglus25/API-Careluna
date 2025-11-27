@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("api-careluna")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+89a78464235a7507798f800ca44af12c803827b8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7a3382c73743b16412595e88a94b7746843ff249")]
 [assembly: System.Reflection.AssemblyProductAttribute("api-careluna")]
 [assembly: System.Reflection.AssemblyTitleAttribute("api-careluna")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,4 +1,6 @@
 D:\Proyectos\App-careluna\api-careluna\out\api-careluna.exe
+D:\Proyectos\App-careluna\api-careluna\out\out\out\out\web.config
+D:\Proyectos\App-careluna\api-careluna\out\out\out\web.config
 D:\Proyectos\App-careluna\api-careluna\out\out\web.config
 D:\Proyectos\App-careluna\api-careluna\out\appsettings.Development.json
 D:\Proyectos\App-careluna\api-careluna\out\appsettings.json
@@ -7,6 +9,16 @@ D:\Proyectos\App-careluna\api-careluna\out\out\api-careluna.runtimeconfig.json
 D:\Proyectos\App-careluna\api-careluna\out\out\api-careluna.staticwebassets.endpoints.json
 D:\Proyectos\App-careluna\api-careluna\out\out\appsettings.Development.json
 D:\Proyectos\App-careluna\api-careluna\out\out\appsettings.json
+D:\Proyectos\App-careluna\api-careluna\out\out\out\api-careluna.deps.json
+D:\Proyectos\App-careluna\api-careluna\out\out\out\api-careluna.runtimeconfig.json
+D:\Proyectos\App-careluna\api-careluna\out\out\out\api-careluna.staticwebassets.endpoints.json
+D:\Proyectos\App-careluna\api-careluna\out\out\out\appsettings.Development.json
+D:\Proyectos\App-careluna\api-careluna\out\out\out\appsettings.json
+D:\Proyectos\App-careluna\api-careluna\out\out\out\out\api-careluna.deps.json
+D:\Proyectos\App-careluna\api-careluna\out\out\out\out\api-careluna.runtimeconfig.json
+D:\Proyectos\App-careluna\api-careluna\out\out\out\out\api-careluna.staticwebassets.endpoints.json
+D:\Proyectos\App-careluna\api-careluna\out\out\out\out\appsettings.Development.json
+D:\Proyectos\App-careluna\api-careluna\out\out\out\out\appsettings.json
 D:\Proyectos\App-careluna\api-careluna\out\api-careluna.dll
 D:\Proyectos\App-careluna\api-careluna\out\api-careluna.runtimeconfig.json
 D:\Proyectos\App-careluna\api-careluna\out\api-careluna.pdb
